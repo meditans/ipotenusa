@@ -1,0 +1,33 @@
+name:                ipotenusa
+version:             0.1.0.0
+synopsis:            Esempio di ottimizzazione per HaskellITA
+homepage:            http://github.com/githubuser/ipotenusa
+license:             BSD3
+license-file:        LICENSE
+author:              Carlo Nucera
+maintainer:          meditans@gmail.com
+copyright:           2015 Carlo Nucera
+category:            Example
+build-type:          Simple
+-- extra-source-files:
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Lib
+  build-depends:       base >= 4.7 && < 5
+                     , array
+  ghc-options:         -O3
+  default-language:    Haskell2010
+
+executable ipotenusa-exe
+  hs-source-dirs:      app
+  main-is:             Main.hs
+  ghc-options:         -O3
+  build-depends:       base
+                     , ipotenusa
+  default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/meditans/ipotenusa
